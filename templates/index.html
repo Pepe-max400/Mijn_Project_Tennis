@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/x-icon.png') }}">
+    <style>
+        .container {
+          text-align: center;   // Centreert "inhoud horizontaal"
+          margin-top: 100px;    // Ruimte "bovenaan"
+        }
+        img {
+          max-width: 200px;    // Afbeelding "Grootte"
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/tennis_logo.png') }}" alt="tennis_logo">
+        <h1>Welcome, {{ name }}!</h1>
+        <nav>
+            <a href="/spelers">Bekijk Spelers</a>
+            <a href="/toernooien">Toernooien</a>
+            <a href="/stats">Statistieken</a>
+        </nav>
+    </div>
+</body>
+</html> 

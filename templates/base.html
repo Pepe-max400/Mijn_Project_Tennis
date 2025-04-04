@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Tennis Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tennis API Dashboard</h1>
+            <nav>
+                <a href="/">Home</a> |
+                <a href="/spelers">Bekijk Spelers</a> |
+                <a href="/toernooien">Toernooien</a> |
+                <a href="/stats">Statistieken</a>
+            </nav>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+</body>
+</html>

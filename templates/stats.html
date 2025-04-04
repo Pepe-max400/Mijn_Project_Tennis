@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Statistieken</h2>
+    <ul>
+        <li><strong>Totaal aantal spelers:</strong> {{ stats.total }}</li>
+        <li><strong>Aantal actieve spelers:</strong> {{ stats.active }}</li>
+        <li><strong>Unieke landen:</strong> {{ stats.countries }}</li>
+    </ul>
+{% endblock %}

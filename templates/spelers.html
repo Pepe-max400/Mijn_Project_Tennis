@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="spelers-container">
+    <h2>Tennisspelers</h2>
+    <table>
+        <tr>
+            <th>Naam</th>
+            <th>Land</th>
+            <th>Grand Slams</th>
+            <th>Status</th>
+        </tr>
+        {% for speler in spelers %}
+        <tr>
+            <td>{{ speler.naam }}</td>
+            <td>{{ speler.land }}</td>
+            <td>{{ speler.grand_slams }}</td>
+            <td>{% if speler.actief %}Actief{% else %}Inactief{% endif %}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

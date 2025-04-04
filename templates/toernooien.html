@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Toernooien</h2>
+    <div class="toernooi-grid">
+        {% for toernooi in toernooien %}
+            <div class="toernooi-card">
+                <h3>{{ toernooi.naam }}</h3>
+                <p><strong>Locatie:</strong> {{ toernooi.locatie }}</p>
+                <p><strong>Ondergrond:</strong> {{ toernooi.ondergrond }}</p>
+                <p><strong>Maand:</strong> {{ toernooi.maand }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
